@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DWB_MOLAP", "DWB_MOLAP\DWB_MOLAP.dwproj", "{DB8455A6-0EAE-49C4-9E4B-2CF0C099D3C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB8455A6-0EAE-49C4-9E4B-2CF0C099D3C7}.Development|Default.ActiveCfg = Development
+		{DB8455A6-0EAE-49C4-9E4B-2CF0C099D3C7}.Development|Default.Build.0 = Development
+		{DB8455A6-0EAE-49C4-9E4B-2CF0C099D3C7}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {707C9032-BCB0-48EE-BA5E-1E1CC5617C08}
+	EndGlobalSection
+EndGlobal

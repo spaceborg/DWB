@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{18ADD272-91A1-4E4F-B266-9ABFF0F371B3}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{B6666C82-D547-4DB7-8B72-C007EEEE939F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -993,7 +993,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[FactVentas]</property>
+                  name="OpenRowset">[dbo].[HechoVentas]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -1074,12 +1074,6 @@
                       externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idEmpleado]"
                       lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[idEmpleado]" />
                     <inputColumn
-                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[idVenta]"
-                      cachedDataType="i4"
-                      cachedName="idVenta"
-                      externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idVentas]"
-                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[idVenta]" />
-                    <inputColumn
                       refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[idMedioPago]"
                       cachedDataType="i4"
                       cachedName="idMedioPago"
@@ -1092,28 +1086,32 @@
                       externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[cantVenta]"
                       lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[cantDetVenta]" />
                     <inputColumn
-                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[precioDetVenta]"
-                      cachedDataType="i4"
-                      cachedName="precioDetVenta"
-                      externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precioVenta]"
-                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precioDetVenta]" />
-                    <inputColumn
                       refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[totalDetVenta]"
                       cachedDataType="i4"
                       cachedName="totalDetVenta"
                       externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[monto]"
                       lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[totalDetVenta]" />
+                    <inputColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[idVenta]"
+                      cachedDataType="i4"
+                      cachedName="idVenta"
+                      externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idVenta]"
+                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[idVenta]" />
+                    <inputColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Correlativo]"
+                      cachedDataType="i8"
+                      cachedName="Correlativo"
+                      externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idHecho]"
+                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Correlativo]" />
+                    <inputColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[precioDetVenta]"
+                      cachedDataType="i4"
+                      cachedName="precioDetVenta"
+                      externalMetadataColumnId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precioVenta]"
+                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[precioDetVenta]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idFactVentas]"
-                      dataType="i4"
-                      name="idFactVentas" />
-                    <externalMetadataColumn
-                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idVentas]"
-                      dataType="i4"
-                      name="idVentas" />
                     <externalMetadataColumn
                       refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idTiempo]"
                       dataType="i4"
@@ -1139,13 +1137,21 @@
                       dataType="i4"
                       name="cantVenta" />
                     <externalMetadataColumn
-                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precioVenta]"
-                      dataType="i4"
-                      name="precioVenta" />
-                    <externalMetadataColumn
                       refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[monto]"
                       dataType="i4"
                       name="monto" />
+                    <externalMetadataColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idVenta]"
+                      dataType="i4"
+                      name="idVenta" />
+                    <externalMetadataColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[idHecho]"
+                      dataType="i4"
+                      name="idHecho" />
+                    <externalMetadataColumn
+                      refId="Package\Hechos Venta\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[precioVenta]"
+                      dataType="i4"
+                      name="precioVenta" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1199,7 +1205,8 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT v.idVenta
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ROW_NUMBER() OVER(ORDER BY COUNT(v.idVenta) DESC) AS Correlativo
+	 , v.idVenta
 	 , CAST(FORMAT(v.fecVenta,'yyyyMMdd') as int) as idTiempo
 	 , v.idCliente
 	 , d.idProducto
@@ -1209,7 +1216,16 @@
 	 , d.precioDetVenta
 	 , d.cantDetVenta * d.precioDetVenta as totalDetVenta
   FROM ventas v INNER JOIN detalleVenta d
-    ON d.idVenta = v.idVenta</property>
+    ON d.idVenta = v.idVenta
+ GROUP BY v.idVenta
+		, v.fecVenta
+		, v.idCliente
+		, d.idProducto
+		, v.idEmpleado
+		, v.idMedioPago
+		, d.cantDetVenta
+		, d.precioDetVenta
+		, totalDetVenta</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -1326,6 +1342,15 @@
                       lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[totalDetVenta]"
                       name="totalDetVenta"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Correlativo]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Correlativo]"
+                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Correlativo]"
+                      name="Correlativo"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1365,6 +1390,10 @@
                       refId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[totalDetVenta]"
                       dataType="i4"
                       name="totalDetVenta" />
+                    <externalMetadataColumn
+                      refId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Correlativo]"
+                      dataType="i8"
+                      name="Correlativo" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1372,6 +1401,11 @@
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Correlativo]"
+                      dataType="i8"
+                      lineageId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Correlativo]"
+                      name="Correlativo" />
                     <outputColumn
                       refId="Package\Hechos Venta\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[idVenta]"
                       dataType="i4"
@@ -1459,7 +1493,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{C0496E11-A3B0-43DC-A84B-C7EBD127F844}"
-          SQLTask:SqlStatementSource="DELETE DimCliente&#xA;DELETE DimEmpleado&#xA;DELETE DimMedioPago&#xA;DELETE DimProducto&#xA;DELETE DimTiempo&#xA;DELETE FactVentas" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE DimCliente&#xA;DELETE DimEmpleado&#xA;DELETE DimMedioPago&#xA;DELETE DimProducto&#xA;DELETE DimTiempo&#xA;DELETE HechoVentas" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2934,7 +2968,7 @@
     design-time-name="Package\Cliente">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Cliente\OLE DB Source"
@@ -2942,41 +2976,39 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Cliente\OLE DB Destination"
-          TopLeft="350,324" />
+          TopLeft="499,166" />
         <EdgeLayout
           Id="Package\Cliente.Paths[OLE DB Source Output]"
           TopLeft="131,119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="304.5,205"
+              EndConnector="453.5,47"
               Start="0,0"
-              End="304.5,197.5">
+              End="453.5,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,98.5" />
+                    End="0,19.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,98.5"
-                    Point2="0,102.5"
-                    Point3="4,102.5" />
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
                   <mssgle:LineSegment
-                    End="300.5,102.5" />
+                    End="449.5,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="300.5,102.5"
-                    Point2="304.5,102.5"
-                    Point3="304.5,106.5" />
+                    Point1="449.5,23.5"
+                    Point2="453.5,23.5"
+                    Point3="453.5,27.5" />
                   <mssgle:LineSegment
-                    End="304.5,197.5" />
+                    End="453.5,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3094,32 +3126,32 @@
         <NodeLayout
           Size="164,42"
           Id="Package\Hechos Venta\Origen de OLE DB"
-          TopLeft="202,53" />
+          TopLeft="200,53" />
         <NodeLayout
           Size="168,42"
           Id="Package\Hechos Venta\Destino de OLE DB"
           TopLeft="578,57" />
         <EdgeLayout
           Id="Package\Hechos Venta.Paths[Salida de origen de OLE DB]"
-          TopLeft="366,76">
+          TopLeft="364,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="212,0"
+              EndConnector="214,0"
               Start="0,0"
-              End="204.5,0">
+              End="206.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="204.5,0" />
+                    End="206.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="89.51640625,5,27.4671875,9.7978515625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

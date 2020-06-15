@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWB_ETL</Name>
-    <LastWriteTime>2020-06-13T03:36:46.8765563Z</LastWriteTime>
+    <LastWriteTime>2020-06-13T21:28:25.9918583Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>CargarDimensiones.dtsx</Name>
-      <LastWriteTime>2020-06-13T06:15:56.5440094Z</LastWriteTime>
+      <LastWriteTime>2020-06-14T20:02:21.0195118Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
