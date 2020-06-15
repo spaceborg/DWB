@@ -1,6 +1,6 @@
 CREATE VIEW vw_tiempo
 AS
-SELECT ROW_NUMBER() OVER(ORDER BY COUNT(idVenta) DESC) AS idTiempo
+SELECT CAST(FORMAT(v.fecVenta,'yyyyMMdd') as int) AS idTiempo
      , v.fecVenta as fecha
      , datepart(WEEKDAY,v.fecVenta) as diaSemana
 	 , datepart(DAY, v.fecVenta) as diaMes
@@ -18,3 +18,4 @@ SELECT ROW_NUMBER() OVER(ORDER BY COUNT(idVenta) DESC) AS idTiempo
 	 , datepart(YEAR, v.fecVenta) as anyo
   FROM ventas v
   GROUP BY v.fecVenta
+

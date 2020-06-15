@@ -9,5 +9,5 @@ SELECT p.idProducto
 	 , c.nomCategoria 
   FROM productos p INNER JOIN marcas m
     ON p.idMarca = m.idMarca INNER JOIN subcategorias s
-	ON p.idSubCategoria = s.idCategoria INNER JOIN categorias c
+	ON p.idSubCategoria = s.idSubCategoria INNER JOIN categorias c
 	ON s.idCategoria = c.idCategoria
